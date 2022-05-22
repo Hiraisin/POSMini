@@ -25,5 +25,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['namespace' => 'master'], function () {
         Route::get('product', 'ProductController@index');
+
+        Route::get('kategori', 'CategoryController@index');
+        Route::get('kategori_id/{id}', 'CategoryController@show');
+        Route::post('kategori', 'CategoryController@store');
+        Route::delete('kategori_delete/{id}', 'CategoryController@destroy');
     });
 });

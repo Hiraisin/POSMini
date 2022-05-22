@@ -32,6 +32,14 @@ $url = url()->current();
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{url('/kategori')}}" class="nav-link {{$url == url('/kategori')? 'active':''}}">
+                        <i class="nav-icon fas fa-calendar"></i>
+                        <p>
+                            Master Kategori
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{url('/product')}}" class="nav-link {{$url == url('/product')? 'active':''}}">
                         <i class="nav-icon fas fa-calendar"></i>
                         <p>

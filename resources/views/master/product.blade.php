@@ -1,12 +1,12 @@
 @extends('layouts.layout')
 
-@section('title','Dashboard')
+@section('title','Master Produk')
 
 @section('content')
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
-            Master Product
+            Master Produk
             <button type="button" class="btn btn-primary btn-sm btnTambah ml-2">Tambah Data</button>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool btnCollapseMain" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
