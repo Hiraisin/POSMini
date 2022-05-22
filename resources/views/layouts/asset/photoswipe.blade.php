@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="{{asset('assets/plugins/photoswipe/photoswipe.css')}}">
-<link rel="stylesheet" href="{{asset('assets/plugins/photoswipe/default-skin/default-skin.css')}}">
+<link rel="stylesheet" href="{{asset('assets/adminlte/plugins/photoswipe/photoswipe.css')}}">
+<link rel="stylesheet" href="{{asset('assets/adminlte/plugins/photoswipe/default-skin/default-skin.css')}}">
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -67,8 +67,8 @@
 
 </div>
 
-<script src="{{ asset('assets/plugins/photoswipe/photoswipe.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/photoswipe/photoswipe-ui-default.min.js') }}"></script>
+<script src="{{ asset('assets/adminlte/plugins/photoswipe/photoswipe.min.js') }}"></script>
+<script src="{{ asset('assets/adminlte/plugins/photoswipe/photoswipe-ui-default.min.js') }}"></script>
 
 <script>
     const img = new Image();

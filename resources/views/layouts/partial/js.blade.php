@@ -5,9 +5,9 @@
     <!-- AdminLTE App -->
     <script src="{{asset('assets/adminlte/dist/js/adminlte.min.js')}}"></script>
     <!-- SweetAlert -->
-    <script src="{{ asset('assets/adminlte/js/sweetalert2.min.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{asset('assets/adminlte/dist/js/app.js')}}"></script>
+    <script src="{{ asset('assets/js/sweetalert2.min.js') }}"></script>
+
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 
     <!-- pace-progress -->
     <script src="{{('assets/adminlte/plugins/pace-progress/pace.min.js')}}"></script>

@@ -35,7 +35,7 @@ $url = url()->current();
                     <a href="{{url('/product')}}" class="nav-link {{$url == url('/product')? 'active':''}}">
                         <i class="nav-icon fas fa-calendar"></i>
                         <p>
-                            Product
+                            Master Product
                         </p>
                     </a>
                 </li>
