@@ -84,4 +84,12 @@ class CategoryController extends Controller
         $data->delete();
         return ['status' => true, 'message' => 'Data Berhasil dihapus'];
     }
+
+    public function list_kategori()
+    {
+        $data = DB::table('categories')
+            ->select('id', 'name')
+            ->get();
+        return ['status' => true, 'data' => $data];
+    }
 }

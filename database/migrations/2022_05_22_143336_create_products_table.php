@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->string('name', 50);
+            $table->integer('harga');
             $table->string('foto')->nullable();
             $table->text('desc');
             $table->timestamps();

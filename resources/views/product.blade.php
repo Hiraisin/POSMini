@@ -43,20 +43,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                     <div class="card-body pb-0">
                         <div class="row">
+                            @if(count($products) == 0)
+                            <div class="col-md-12 text-center">
+                                <h5> Produk belum ditambahkan</h5>
+                            </div>
+                            @endif
+                            @foreach($products as $row)
                             <div class="col-12 col-sm-4 col-md-3 d-flex align-items-stretch flex-column">
                                 <div class="card bg-light d-flex flex-fill">
                                     <div class="card-header text-muted border-bottom-0 text-center">
                                         <div class="col-12">
-                                            <img src="{{asset('assets/img/paket-desktop.png')}}" alt="user-avatar" class="img-circle img-fluid">
+                                            <img src="{{asset('assets/img/product/')}}/{{$row->foto}}" alt="Image Product" class="img-circle" height="100px">
                                         </div>
-                                        Majoo Pro
+                                        {{$row->name}}
                                     </div>
                                     <div class="card-body pt-0">
                                         <div class="row">
                                             <div class="col-12">
-                                                <h2 class="lead text-center"><b>Rp 2.750.000</b></h2>
+                                                <h2 class="lead text-center"><b>{{convert_to_rupiah($row->harga)}}</b></h2>
                                                 <p class="text-muted text-sm">
-                                                    Lorem ipsum is simply dummy text of the printing and typesetting industry
+                                                    <?= ($row->desc) ?>
                                                 </p>
                                             </div>
                                         </div>
@@ -70,23 +76,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                     <!-- /.card-body -->
-                    <!-- <div class="card-footer">
-                        <nav aria-label="Contacts Page Navigation">
-                            <ul class="pagination justify-content-center m-0">
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                <li class="page-item"><a class="page-link" href="#">8</a></li>
-                            </ul>
-                        </nav>
-                    </div> -->
+                    <div class="card-footer text-center">
+                        {{$products->links()}}
+                    </div>
                     <!-- /.card-footer -->
                 </div>
                 <!-- /.card -->
@@ -117,8 +113,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{asset('assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('assets/adminlte/dist/js/adminlte.min.js')}}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{asset('assets/adminlte/dist/js/demo.js')}}"></script>
 </body>
 
 </html>
